@@ -97,7 +97,7 @@ create a continuous integration build triggered by changes to the repository.
      configured a Service Connection to your Azure subscription in this Azure DevOps project).
    * Select your *Azure Container Registry* to which you will push your images.
    * Update the *Command* to be **push** (it changed to build when you changed the version)
-   * Update the *Image Name* field to be **songrequest.mesageconsumer:$(Build.BuildId)**.
+   * Update the *Image Name* field to be **songrequest.messageconsumer:$(Build.BuildId)**.
    * Check the **Include Latest Tag** box.
 8. Repeat steps 6 and 7 for the SongRequest.WebFrontEnd project so that you are building
    and pushing the **songrequest.webfrontend** image correctly. You will need to add two
@@ -157,5 +157,5 @@ template*. Find the *Deploy to a Kubernetes cluster* template and click **Apply*
 With these steps, you now have a full CI/CD pipeline. Although we didn't trigger
 the release to work as a continuous deployment at this time and must be manually
 triggered. You would need to decide at what point a release makes sense for your
-environement -- when the code repository is changed, or when images have been updated
+environment -- when the code repository is changed, or when images have been updated
 in the container registry.
